@@ -162,13 +162,6 @@
                 "spoofing": 4,
                 "repudiation": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1558,8 +1551,8 @@
                 "text": "Clinic/Hospital"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1655,9 +1648,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "e6e45e89-93a0-4489-bdf8-29184f1ee25c",
+                  "title": "Peniruan Identitas Sistem RS untuk Meminta Data Ilegal",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Penyerang berhasil meniru (spoof) identitas sistem informasi salah satu rumah sakit mitra yang sah. Dengan identitas palsu ini, penyerang membuat permintaan API ke MediCare+ untuk mendapatkan data pasien dari rumah sakit lain, mengeksploitasi hubungan kepercayaan antar sistem.",
+                  "mitigation": "Otentikasi Dua Arah (mTLS): Wajibkan otentikasi berbasis sertifikat dua arah antara MediCare+ dan setiap sistem mitra.\n\nIP Whitelisting: Batasi koneksi API hanya dari alamat IP yang sudah terdaftar milik rumah sakit mitra.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -1674,8 +1685,8 @@
                 "text": "BPJS & \nAsuransi Swasta"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1771,9 +1782,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "08d14d47-bdf7-48e7-a444-cefa39a0f8b1",
+                  "title": "Penyangkalan Penerimaan Data Klaim oleh BPJS",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Sistem BPJS atau Asuransi mengklaim tidak pernah menerima data klaim yang dikirim oleh MediCare+ karena tidak ada jejak audit atau tanda tangan digital yang kuat. Hal ini menyebabkan proses klaim terhambat dan potensi kerugian finansial.",
+                  "mitigation": "Tanda Tangan Digital pada Transaksi: Setiap batch data klaim yang dikirim harus ditandatangani secara digital oleh MediCare+.\n\nAPI Konfirmasi: Wajibkan sistem mitra untuk mengirimkan respons konfirmasi yang juga ditandatangani secara digital sebagai bukti penerimaan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -1790,8 +1819,8 @@
                 "text": "Apotec/Lab"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1887,9 +1916,40 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "841b2429-4da7-414e-b2c4-cd30401d229a",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "1d4cc247-34bc-443d-ba74-6dbd03fcd839",
+                  "title": "Peniruan Identitas Apotek untuk Mencuri Data E-Resep",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Penyerang membuat server palsu yang menyamar sebagai API sistem apotek mitra. MediCare+ yang tidak melakukan validasi sertifikat dengan benar mengirimkan data e-resep (termasuk data pasien) ke server palsu tersebut.",
+                  "mitigation": "Otentikasi Dua Arah (Mutual TLS - mTLS): Wajibkan klien dan server untuk saling mengotentikasi menggunakan sertifikat.\n\nCertificate Pinning.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2020,6 +2080,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Muhammad Zain Rizqulloh",
-    "threatTop": 10
+    "threatTop": 14
   }
 }
