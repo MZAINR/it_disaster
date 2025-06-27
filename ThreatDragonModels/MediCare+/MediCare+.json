@@ -134,7 +134,7 @@
                 {
                   "id": "b11999d4-3b38-4c5c-b193-bdd954705e4f",
                   "title": "Peniruan Identitas Pengguna (Dokter/Pasien)",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Penyerang menggunakan kredensial yang dicuri (misal dari phishing) untuk login sebagai dokter atau pasien. Jika sebagai dokter, penyerang bisa mengakses data medis sensitif. Jika sebagai pasien, penyerang bisa menyalahgunakan data pribadi atau riwayat kesehatan.",
@@ -159,9 +159,16 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
-                "repudiation": 1
+                "spoofing": 3,
+                "repudiation": 2
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -298,7 +305,7 @@
                   "id": "da706af9-5be7-4584-950b-77851e605038",
                   "title": "Pembocoran Informasi Teknis Melalui Pesan Error",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Ketika aplikasi mengalami kesalahan, ia menampilkan pesan error yang terlalu detail (misal, stack trace, nama tabel database) kepada pengguna. Informasi ini dapat dimanfaatkan penyerang untuk merencanakan serangan yang lebih canggih.",
                   "mitigation": "1. Halaman Error Generik. \n2. Logging Error di Sisi Server.",
@@ -312,7 +319,7 @@
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 1
               }
