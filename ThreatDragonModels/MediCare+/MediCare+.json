@@ -135,14 +135,14 @@
                   "id": "b11999d4-3b38-4c5c-b193-bdd954705e4f",
                   "title": "Peniruan Identitas Pengguna (Dokter/Pasien)",
                   "status": "Mitigated",
-                  "severity": "High",
+                  "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Penyerang menggunakan kredensial yang dicuri (misal dari phishing) untuk login sebagai dokter atau pasien. Jika sebagai dokter, penyerang bisa mengakses data medis sensitif. Jika sebagai pasien, penyerang bisa menyalahgunakan data pribadi atau riwayat kesehatan.",
-                  "mitigation": "1. MFA (Multi-Factor Authentication): Wajibkan otentikasi dua faktor untuk semua pengguna, terutama dokter dan staf kementerian. \n 2. Notifikasi Login: Kirim notifikasi email/push setiap kali ada login dari perangkat atau lokasi baru. \n 3. Edukasi Pengguna: Lakukan sosialisasi tentang bahaya phishing dan pentingnya keamanan akun.",
+                  "mitigation": "1. MFA (Multi-Factor Authentication): Wajibkan otentikasi dua faktor untuk semua pengguna, terutama dokter dan staf kementerian. \n 2. Notifikasi Login: Kirim notifikasi email/push setiap kali ada login dari perangkat atau lokasi baru. \n 3. Edukasi Pengguna: Lakukan sosialisasi tentang bahaya phishing dan pentingnya kehati-hatian dalam menekan tautan asing.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 2,
-                  "score": "8"
+                  "score": "5.187"
                 },
                 {
                   "id": "d29133c2-c502-405d-937f-ddfef2999244",
@@ -159,9 +159,16 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 4,
+                "spoofing": 5,
                 "repudiation": 2
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -438,88 +445,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Dashboard Access Req",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "27d5ff71-a570-48fc-974a-9c6685dd818a",
-                  "title": "Pengubahan Data E-Resep saat Dikirim",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Penyerang dengan posisi Man-in-the-Middle mencegat aliran data Request dari dokter dan mengubah isinya (misal dosis obat) sebelum sampai ke server aplikasi.",
-                  "mitigation": "1. Gunakan TLS 1.3: Gunakan enkripsi transport yang kuat untuk semua komunikasi. \n2. Checksum/Digital Signature: Gunakan hash atau tanda tangan digital pada payload permintaan untuk memverifikasi integritasnya di sisi server.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 7,
-                  "score": "6"
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Dashboard Access Req"
-            ],
-            "id": "93a34b31-2bd1-4ac9-a822-96000336f31a",
-            "source": {
-              "cell": "6212bb4b-d11c-4a6a-89d9-a67d96e84fe9",
-              "port": "9b87304f-3556-4ba0-9cfa-e9a41a01a207"
-            },
-            "target": {
-              "cell": "4adb603c-235e-404b-a6ae-736ddd4ee31c",
-              "port": "cfa89c15-fdc9-4316-aefa-e73ab4349c10"
-            },
-            "vertices": [
-              {
-                "x": 180,
-                "y": 390
-              },
-              {
-                "x": 280,
-                "y": 410
-              },
-              {
-                "x": 290,
-                "y": 420
-              },
-              {
-                "x": 390,
-                "y": 490
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -563,6 +488,10 @@
               {
                 "x": 610,
                 "y": 480
+              },
+              {
+                "x": 680,
+                "y": 380
               },
               {
                 "x": 730,
@@ -1235,6 +1164,88 @@
               {
                 "x": 920,
                 "y": 630
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Dashboard Access Req",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "27d5ff71-a570-48fc-974a-9c6685dd818a",
+                  "title": "Pengubahan Data E-Resep saat Dikirim",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Penyerang dengan posisi Man-in-the-Middle mencegat aliran data Request dari dokter dan mengubah isinya (misal dosis obat) sebelum sampai ke server aplikasi.",
+                  "mitigation": "1. Gunakan TLS 1.3: Gunakan enkripsi transport yang kuat untuk semua komunikasi. \n2. Checksum/Digital Signature: Gunakan hash atau tanda tangan digital pada payload permintaan untuk memverifikasi integritasnya di sisi server.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Dashboard Access Req"
+            ],
+            "id": "93a34b31-2bd1-4ac9-a822-96000336f31a",
+            "source": {
+              "cell": "6212bb4b-d11c-4a6a-89d9-a67d96e84fe9",
+              "port": "9b87304f-3556-4ba0-9cfa-e9a41a01a207"
+            },
+            "target": {
+              "cell": "4adb603c-235e-404b-a6ae-736ddd4ee31c",
+              "port": "cfa89c15-fdc9-4316-aefa-e73ab4349c10"
+            },
+            "vertices": [
+              {
+                "x": 180,
+                "y": 390
+              },
+              {
+                "x": 260,
+                "y": 390
+              },
+              {
+                "x": 290,
+                "y": 420
+              },
+              {
+                "x": 390,
+                "y": 490
               }
             ]
           },
