@@ -28,7 +28,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Patient\nDoctor\nMinistry"
+                "text": "User\n(Patient & Doctor)"
               },
               "body": {
                 "stroke": "red",
@@ -124,7 +124,7 @@
             "id": "6212bb4b-d11c-4a6a-89d9-a67d96e84fe9",
             "data": {
               "type": "tm.Actor",
-              "name": "Patient\nDoctor\nMinistry",
+              "name": "User\n(Patient & Doctor)",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -166,8 +166,8 @@
           },
           {
             "position": {
-              "x": 425,
-              "y": 510.00000000000057
+              "x": 435,
+              "y": 500
             },
             "size": {
               "width": 110,
@@ -175,7 +175,7 @@
             },
             "attrs": {
               "text": {
-                "text": "web app &\nmobile app"
+                "text": "Web App\n&\nMobile App"
               },
               "body": {
                 "stroke": "red",
@@ -271,7 +271,7 @@
             "id": "4adb603c-235e-404b-a6ae-736ddd4ee31c",
             "data": {
               "type": "tm.Process",
-              "name": "web app &\nmobile app",
+              "name": "Web App\n&\nMobile App",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -413,12 +413,12 @@
             },
             "vertices": [
               {
-                "x": 370,
-                "y": 380
+                "x": 380,
+                "y": 370
               },
               {
-                "x": 370,
-                "y": 430
+                "x": 380,
+                "y": 440
               },
               {
                 "x": 430,
@@ -446,7 +446,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Request",
+              "name": "Request Data",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -458,7 +458,7 @@
               "threats": []
             },
             "labels": [
-              "Request"
+              "Request Data"
             ],
             "id": "d567f9e9-51b6-4aef-8400-ddcab2b0ae3a",
             "source": {
@@ -476,7 +476,11 @@
               },
               {
                 "x": 580,
-                "y": 410
+                "y": 460
+              },
+              {
+                "x": 600,
+                "y": 380
               }
             ]
           },
@@ -501,7 +505,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Request",
+              "name": "Dashboard Access Req",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -532,7 +536,7 @@
               }
             },
             "labels": [
-              "Request"
+              "Dashboard Access Req"
             ],
             "id": "93a34b31-2bd1-4ac9-a822-96000336f31a",
             "source": {
@@ -547,6 +551,10 @@
               {
                 "x": 180,
                 "y": 390
+              },
+              {
+                "x": 280,
+                "y": 410
               },
               {
                 "x": 290,
@@ -686,7 +694,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Request",
+              "name": "Initiate Video Conference",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -698,7 +706,7 @@
               "threats": []
             },
             "labels": [
-              "Request"
+              "Initiate Video Conference"
             ],
             "id": "d019ecb9-c870-4ead-99bc-167539933191",
             "source": {
@@ -889,12 +897,12 @@
             },
             "vertices": [
               {
-                "x": 340,
-                "y": 700
+                "x": 350,
+                "y": 690
               },
               {
-                "x": 400,
-                "y": 660
+                "x": 420,
+                "y": 650
               }
             ]
           },
@@ -1091,70 +1099,12 @@
             },
             "vertices": [
               {
-                "x": 970,
-                "y": 470
-              },
-              {
-                "x": 840,
+                "x": 950,
                 "y": 490
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Request",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Request"
-            ],
-            "id": "f04508e2-8f69-4a54-b1f2-9e1e0099ba59",
-            "source": {
-              "cell": "4adb603c-235e-404b-a6ae-736ddd4ee31c",
-              "port": "e16cd9b6-c56f-426f-a081-84ed3d6d3b3e"
-            },
-            "target": {
-              "cell": "ebeda54a-c55f-4f3b-9870-9512a6618180",
-              "port": "d24838a1-b342-458f-ad42-ad0f08b2d50a"
-            },
-            "vertices": [
-              {
-                "x": 580,
-                "y": 600
               },
               {
-                "x": 710,
-                "y": 630
-              },
-              {
-                "x": 920,
-                "y": 630
+                "x": 820,
+                "y": 490
               }
             ]
           },
@@ -1216,46 +1166,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "External Network Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              "External Network Trust Boundary"
-            ],
-            "id": "dc07e7e2-f632-4c2b-8c02-d981b4e6ef57",
-            "source": {
-              "x": 640,
-              "y": 270
-            },
-            "target": {
-              "x": 790,
-              "y": 740
-            },
-            "vertices": [
-              {
-                "x": 630,
-                "y": 400
-              },
-              {
-                "x": 630,
-                "y": 500
-              },
-              {
-                "x": 680,
-                "y": 610
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
               "name": "Cloud Database Boundary",
               "description": "",
               "isTrustBoundary": true,
@@ -1277,6 +1187,104 @@
               {
                 "x": 750,
                 "y": 790
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "External Network Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "External Network Trust Boundary"
+            ],
+            "id": "dc07e7e2-f632-4c2b-8c02-d981b4e6ef57",
+            "source": {
+              "x": 670,
+              "y": 280
+            },
+            "target": {
+              "x": 820,
+              "y": 690
+            },
+            "vertices": [
+              {
+                "x": 630,
+                "y": 400
+              },
+              {
+                "x": 630,
+                "y": 500
+              },
+              {
+                "x": 680,
+                "y": 610
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Request"
+            ],
+            "id": "f04508e2-8f69-4a54-b1f2-9e1e0099ba59",
+            "source": {
+              "cell": "4adb603c-235e-404b-a6ae-736ddd4ee31c",
+              "port": "e16cd9b6-c56f-426f-a081-84ed3d6d3b3e"
+            },
+            "target": {
+              "cell": "ebeda54a-c55f-4f3b-9870-9512a6618180",
+              "port": "d24838a1-b342-458f-ad42-ad0f08b2d50a"
+            },
+            "vertices": [
+              {
+                "x": 580,
+                "y": 600
+              },
+              {
+                "x": 710,
+                "y": 630
+              },
+              {
+                "x": 920,
+                "y": 630
               }
             ]
           },
@@ -1440,8 +1448,8 @@
           },
           {
             "position": {
-              "x": 190,
-              "y": 610.0000000000006
+              "x": 170,
+              "y": 630
             },
             "size": {
               "width": 90,
@@ -1816,8 +1824,8 @@
           },
           {
             "position": {
-              "x": 405,
-              "y": 320
+              "x": 415,
+              "y": 290
             },
             "size": {
               "width": 150,
@@ -1825,7 +1833,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Klinik/Rumah sakit"
+                "text": "Clinic/Hospital"
               },
               "body": {
                 "stroke": "#333333",
@@ -1921,7 +1929,7 @@
             "id": "52f3ca69-6df7-412d-b364-c942d0912dbc",
             "data": {
               "type": "tm.Actor",
-              "name": "Klinik/Rumah sakit",
+              "name": "Clinic/Hospital",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1932,8 +1940,8 @@
           },
           {
             "position": {
-              "x": 943.75,
-              "y": 510.00000000000057
+              "x": 960,
+              "y": 540
             },
             "size": {
               "width": 112.5,
@@ -2168,7 +2176,7 @@
           {
             "position": {
               "x": 910,
-              "y": 300
+              "y": 290
             },
             "size": {
               "width": 180,
@@ -2176,7 +2184,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Apotek & laboratorium"
+                "text": "Apotec/Lab"
               },
               "body": {
                 "stroke": "#333333",
@@ -2272,7 +2280,7 @@
             "id": "fa893f36-3fd0-43f9-bd87-11eb7e945690",
             "data": {
               "type": "tm.Actor",
-              "name": "Apotek & laboratorium",
+              "name": "Apotec/Lab",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -2305,6 +2313,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 24,
             "ports": {
               "groups": {
                 "top": {
@@ -2388,7 +2397,6 @@
               ]
             },
             "id": "c96e43b6-3faa-4cf7-bd76-784b0e4a29b9",
-            "zIndex": 24,
             "data": {
               "type": "tm.Store",
               "name": "Database \nOn-premise",
