@@ -162,13 +162,6 @@
                 "spoofing": 5,
                 "repudiation": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1188,7 +1181,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Dashboard Access Req",
+              "name": "Request",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1219,7 +1212,7 @@
               }
             },
             "labels": [
-              "Dashboard Access Req"
+              "Request"
             ],
             "id": "93a34b31-2bd1-4ac9-a822-96000336f31a",
             "source": {
