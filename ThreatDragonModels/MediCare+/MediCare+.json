@@ -142,7 +142,7 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 2,
-                  "score": ""
+                  "score": "8"
                 },
                 {
                   "id": "d29133c2-c502-405d-937f-ddfef2999244",
@@ -159,7 +159,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 3,
+                "spoofing": 4,
                 "repudiation": 2
               }
             },
