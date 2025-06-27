@@ -306,19 +306,6 @@
                   "new": false,
                   "number": 5,
                   "score": "3"
-                },
-                {
-                  "id": "e642db80-0412-46fe-97f3-dd098ef1dad0",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 14,
-                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -747,6 +734,56 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Response"
+            ],
+            "id": "d0e6a913-2d31-4991-b92c-b5fb3cd4622a",
+            "source": {
+              "x": 810,
+              "y": 570
+            },
+            "target": {
+              "x": 580,
+              "y": 590
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 590
+              }
+            ]
+          },
+          {
             "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
@@ -1020,56 +1057,6 @@
               {
                 "x": 640,
                 "y": 470
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Response",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Response"
-            ],
-            "id": "d0e6a913-2d31-4991-b92c-b5fb3cd4622a",
-            "source": {
-              "x": 810,
-              "y": 570
-            },
-            "target": {
-              "cell": "4adb603c-235e-404b-a6ae-736ddd4ee31c",
-              "port": "e16cd9b6-c56f-426f-a081-84ed3d6d3b3e"
-            },
-            "vertices": [
-              {
-                "x": 700,
-                "y": 590
               }
             ]
           },
@@ -1621,8 +1608,8 @@
                 "text": "Klinik/Rumah sakit"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1718,27 +1705,9 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "8400a36e-25f3-4c56-b0fa-57d25cc241a2",
-                  "title": "Peniruan Identitas Sistem RS untuk Meminta Data Ilegal",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Spoofing",
-                  "description": "Penyerang berhasil meniru (spoof) identitas sistem informasi salah satu rumah sakit mitra yang sah. Dengan identitas palsu ini, penyerang membuat permintaan API ke MediCare+ untuk mendapatkan data pasien dari rumah sakit lain, mengeksploitasi hubungan kepercayaan antar sistem.",
-                  "mitigation": "1. Otentikasi Dua Arah (mTLS): Wajibkan otentikasi berbasis sertifikat dua arah antara MediCare+ dan setiap sistem mitra. \n2. IP Whitelisting: Batasi koneksi API hanya dari alamat IP yang sudah terdaftar milik rumah sakit mitra.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 16,
-                  "score": "7"
-                }
-              ],
-              "threatFrequency": {
-                "spoofing": 1,
-                "repudiation": 0
-              }
+              "threats": []
             }
           },
           {
@@ -1755,8 +1724,8 @@
                 "text": "BPJS & \nAsuransi Swasta"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1852,27 +1821,9 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "dbcb1957-b546-432e-b21c-9df7aea6d7b0",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Repudiation",
-                  "description": "Sistem BPJS atau Asuransi mengklaim tidak pernah menerima data klaim yang dikirim oleh MediCare+ karena tidak ada jejak audit atau tanda tangan digital yang kuat. Hal ini menyebabkan proses klaim terhambat dan potensi kerugian finansial.",
-                  "mitigation": "1. Tanda Tangan Digital pada Transaksi: Setiap batch data klaim yang dikirim harus ditandatangani secara digital oleh MediCare+. \n2. API Konfirmasi: Wajibkan sistem mitra untuk mengirimkan respons konfirmasi yang juga ditandatangani secara digital sebagai bukti penerimaan.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 17,
-                  "score": "5"
-                }
-              ],
-              "threatFrequency": {
-                "spoofing": 0,
-                "repudiation": 1
-              }
+              "threats": []
             }
           },
           {
@@ -2131,8 +2082,8 @@
                 "text": "Apotek & laboratorium"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2228,27 +2179,9 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "1ca61280-8e1b-4cf0-9ab8-8fbc0f6b5ca5",
-                  "title": "Peniruan Identitas Apotek untuk Mencuri Data E-Resep",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "Penyerang membuat server palsu yang menyamar sebagai API sistem apotek mitra. MediCare+ yang tidak melakukan validasi sertifikat dengan benar mengirimkan data e-resep (termasuk data pasien) ke server palsu tersebut.",
-                  "mitigation": "1. Otentikasi Dua Arah (Mutual TLS - mTLS): Wajibkan klien dan server untuk saling mengotentikasi menggunakan sertifikat. \n2. Certificate Pinning.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 15,
-                  "score": "6"
-                }
-              ],
-              "threatFrequency": {
-                "spoofing": 1,
-                "repudiation": 0
-              }
+              "threats": []
             }
           }
         ]
@@ -2256,6 +2189,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Muhammad Zain Rizqulloh",
-    "threatTop": 17
+    "threatTop": 10
   }
 }
